@@ -1,0 +1,15 @@
+<h2>{{@title}}</h2>
+{{!-- the "@" indicates that "@title" is an argument that will be passed into the component. This makes it easier to reuse the same component in other parts of the app --}}
+<ul>
+    {{#each @people as |person|}}
+    <li>
+        <button {{on 'click'(fn this.showPerson person)}}>{{person}}</button>
+    
+        {{!-- used the "on" "modifier" to attach this.showPerson action (wrote this inside people-list.js file) to the button in the template  --}}
+
+        {{!-- instead of passing the action to the on modifier directly, I used the fn helper to pass the person as an argument bc the action takes in an argument  --}}
+    </li>
+    {{/each}}
+</ul>
+ {{!-- we use the each helper to loop over each item in the array we provided from the model() hook. Ember will render the block contained inside the {{#each}}...{{/each}} helper once for each item in the array. The item that is being rendered currently will be made available in the people variable within the #each, |people|. --}}
+{{yield}}

@@ -1,0 +1,13 @@
+{{!-- scientists template. similiar to a component  --}}
+
+{{!-- hbs stands for handle bars. allows us to write more than html inside a template. similar to JSX --}}
+
+<PeopleList @title="List of Scientists" @people={{@model}} />
+
+{{outlet}}
+
+{{!-- componentized version --}}
+{{!-- 
+1. tell our component what title to use, via the @title argument 
+2. What array of people to use, via the @people argument 
+--}}
