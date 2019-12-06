@@ -1,3 +1,4 @@
+{{!-- components allows you to break up your templates and organize them into small, self-contained and reusable pieces --}}
 <h2>{{@title}}</h2>
 {{!-- the "@" indicates that "@title" is an argument that will be passed into the component. This makes it easier to reuse the same component in other parts of the app --}}
 <ul>
@@ -13,3 +14,5 @@
 </ul>
  {{!-- we use the each helper to loop over each item in the array we provided from the model() hook. Ember will render the block contained inside the {{#each}}...{{/each}} helper once for each item in the array. The item that is being rendered currently will be made available in the people variable within the #each, |people|. --}}
 {{yield}}
+
+{{!-- You can think of components as Ember's way for letting you create your own HTML tags. In addition to rendering content, components can also have JavaScript code associated with them, allowing you to add behavior, such as responding to a user clicking on your component. --}}
