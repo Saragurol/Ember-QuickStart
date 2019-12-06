@@ -10,3 +10,6 @@ Router.map(function() {
   this.route('scientists');
   this.route('programmers');
 });
+
+//maps URL to a route
+//exmaple http://localhost:4200/scientists maps to the 'scientists' route
